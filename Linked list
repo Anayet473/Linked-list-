@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+struct Node{
+int data;
+Node*next;
+};
+int main(){
+Node*a=new Node();
+Node*b=new Node();
+Node*c=new Node();
+a->data=7;
+b->data=14;
+c->data=15;
+a->next=b;
+b->next=c;
+c->next=NULL;
+
+Node*head=a;
+while(head!=NULL){
+    cout<<head->data<<" ";
+    head=head->next;
+}
+delete a;
+delete b;
+delete c;
+
+return 0;
+}
